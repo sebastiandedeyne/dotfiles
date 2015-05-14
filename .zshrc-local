@@ -4,7 +4,7 @@ source ~/Sites/sebastiandedeyne/dotfiles/.zshrc
 
 # General
 alias http="python -m SimpleHTTPServer"
-alias hosts="vi /etc/hosts"
+alias hosts="sudo vi /etc/hosts"
 
 # Vim
 alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"

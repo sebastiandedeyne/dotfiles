@@ -10,6 +10,12 @@ alias phpunit="vendor/bin/phpunit"
 alias art="php artisan"
 
 # Mysql
-function refreshdb {
-    mysql -u root -p -e "drop database $1; create database $1"
+function db {
+    if [ "$1" = "refresh" ]; then
+        mysql -e "drop database $2; create database $2"
+    elif [ "$1" = "create" ]; then
+        mysql -e "create database $2"
+    elif [ "$1" = "drop" ]; then
+        mysql -e "drop database $2"
+    fi
 }

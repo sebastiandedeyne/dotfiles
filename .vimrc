@@ -29,6 +29,9 @@ set scrolloff=3
 set sidescrolloff=5
 " Scroll sideways a character at a time, rather than a screen at a time
 set sidescroll=1
+" Backspace behaviour
+set nocompatible
+set backspace=2
 
 " Visual decorations
 
