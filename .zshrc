@@ -13,6 +13,7 @@ export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sb
 # Vim
 export VISUAL=vim
 export EDITOR="$VISUAL"
+alias vi="vim"
 
 # Git
 alias gadd="git add --all"

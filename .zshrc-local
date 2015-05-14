@@ -6,6 +6,9 @@ source ~/Sites/sebastiandedeyne/dotfiles/.zshrc
 alias http="python -m SimpleHTTPServer"
 alias hosts="vi /etc/hosts"
 
+# Vim
+alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
+
 # Go
 export PATH="$PATH:/usr/local/go/bin"
 export GOPATH=~/.go
