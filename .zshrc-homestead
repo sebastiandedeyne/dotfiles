@@ -2,6 +2,8 @@
 
 source ~/Sites/sebastiandedeyne/dotfiles/.zshrc
 
+export PATH="$PATH:/$HOME/.composer/vendor/bin"
+
 # PHP
 alias phpspec="vendor/bin/phpspec"
 alias phpunit="vendor/bin/phpunit"
