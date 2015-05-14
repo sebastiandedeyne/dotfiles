@@ -5,10 +5,13 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
-alias zshrc="vi ~/Sites/sebastiandedeyne/dotfiles/.zshrc"
 
 # General
 export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+
+# Shortcuts
+alias sites="~/Sites"
+alias dotfiles="~/Sites/sebastiandedeyne/dotfiles"
 
 # Vim
 export VISUAL=vim
