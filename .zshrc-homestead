@@ -9,5 +9,5 @@ alias art="php artisan"
 
 # Mysql
 function refreshdb {
-    mysql -u root -p -e "delete database $1; create database $1"
+    mysql -u root -p -e "drop database $1; create database $1"
 }
