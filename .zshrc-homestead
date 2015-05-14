@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+source ~/Sites/sebastiandedeyne/dotfiles/.zshrc
+
+# PHP
+alias phpspec="vendor/bin/phpspec"
+alias phpunit="vendor/bin/phpunit"
+alias art="php artisan"
+
+# Mysql
+function refreshdb {
+    mysql -u root -p -e "delete database $1; create database $1"
+}

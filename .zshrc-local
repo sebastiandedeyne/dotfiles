@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+source ~/Sites/sebastiandedeyne/dotfiles/.zshrc
+
+# General
+alias http="python -m SimpleHTTPServer"
+alias hosts="vi /etc/hosts"
+
+# Go
+export PATH="$PATH:/usr/local/go/bin"
+export GOPATH=~/.go
+
+# Homestead
+alias hs="~/.composer/vendor/bin/homestead"
+
+# Applications
+alias sourcetree="open -a SourceTree"
+
+function subl {
+    if [ -z "$1" ]; then
+        if [ ! -f ./${PWD##*/}.sublime-project ]; then
+            open . -a "Sublime Text"
+        else
+            open ./${PWD##*/}.sublime-project
+        fi
+    else
+        open $1 -a "Sublime Text"
+    fi
+}
