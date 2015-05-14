@@ -10,6 +10,11 @@ alias phpunit="vendor/bin/phpunit"
 alias art="php artisan"
 
 # Mysql
+# Note: requires ~/.my.cnf
+# Ex:
+# [client]
+# user = root
+# password = XXXXXXXX
 function db {
     if [ "$1" = "refresh" ]; then
         mysql -e "drop database $2; create database $2"
