@@ -6,6 +6,12 @@ source ~/Sites/sebastiandedeyne/dotfiles/.zshrc
 alias http="python -m SimpleHTTPServer"
 alias hosts="sudo vi /etc/hosts"
 
+# Git
+function bitbucket {
+    git clone git@bitbucket.org:$1
+}
+alias bb="bitbucket"
+
 # Vim
 alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
 
