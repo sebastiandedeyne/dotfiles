@@ -27,3 +27,8 @@ function gac {
     git add --all
     git commit -m $1
 }
+
+# Various
+function digga() {
+    dig +nocmd "$1" any +multiline +noall +answer
+}
