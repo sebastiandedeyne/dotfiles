@@ -32,3 +32,6 @@ function gac {
 function digga() {
     dig +nocmd "$1" any +multiline +noall +answer
 }
+
+# Z
+. ~/Sites/sebastiandedeyne/dotfiles/z.sh
