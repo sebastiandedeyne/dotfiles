@@ -13,6 +13,7 @@ alias composr="composer"
 alias cmposer="composer"
 alias compser="composer"
 alias compsoer="composer"
+alias dump="composer dump"
 
 # Mysql
 # Note: requires ~/.my.cnf
