@@ -2,19 +2,6 @@
 
 source ~/Sites/sebastiandedeyne/dotfiles/.zshrc
 
-export PATH="$PATH:/$HOME/.composer/vendor/bin"
-
-# PHP
-alias phpspec="vendor/bin/phpspec"
-alias phpunit="vendor/bin/phpunit"
-alias art="php artisan"
-alias c="composer"
-alias composr="composer"
-alias cmposer="composer"
-alias compser="composer"
-alias compsoer="composer"
-alias dump="composer dump"
-
 # Mysql
 # Note: requires ~/.my.cnf
 # Ex:

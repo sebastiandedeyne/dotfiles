@@ -8,6 +8,7 @@ source $ZSH/oh-my-zsh.sh
 
 # General
 export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+export PATH="$PATH:/$HOME/.composer/vendor/bin"
 
 # Shortcuts
 alias sites="~/Sites"
@@ -27,6 +28,17 @@ function gac {
     git add --all
     git commit -m $1
 }
+
+# PHP
+alias phpspec="vendor/bin/phpspec"
+alias phpunit="vendor/bin/phpunit"
+alias art="php artisan"
+alias c="composer"
+alias composr="composer"
+alias cmposer="composer"
+alias compser="composer"
+alias compsoer="composer"
+alias dump="composer dump"
 
 # Various
 function digga() {
