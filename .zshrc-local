@@ -36,3 +36,12 @@ function subl {
         open $1 -a "Sublime Text"
     fi
 }
+
+# Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# MAMP
+function mamp {
+    rm /Applications/MAMP/htdocs
+    ln -s $(cd "$1"; pwd) /Applications/MAMP/htdocs
+}
