@@ -22,12 +22,22 @@ alias vi="vim"
 # Git
 alias gadd="git add --all"
 alias gpu="git push -u origin master"
-alias goops="git add --all && git commit -m \"Fixed unnecessary line(s) from last commit\""
+alias goops="git add --all && git commit -m \"Minor fix for last commit\""
 
 function gac {
     git add --all
     git commit -m $1
 }
+
+function github {
+    git clone git@github.com:$1.git
+}
+alias gh="github"
+
+function bitbucket {
+    git clone git@bitbucket.org:$1
+}
+alias bb="bitbucket"
 
 # PHP
 alias phpspec="vendor/bin/phpspec"
