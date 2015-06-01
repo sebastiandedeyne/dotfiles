@@ -39,12 +39,19 @@ function bitbucket {
 }
 alias bb="bitbucket"
 
+function phpackage {
+    git clone git@github.com:thephpleague/skeleton.git $1
+    cd $1
+    rm -rf .git
+}
+
 # PHP
 alias phpspec="vendor/bin/phpspec"
 alias phpunit="vendor/bin/phpunit"
 alias art="php artisan"
 alias c="composer"
 alias cu="composer update"
+alias cr="composer require"
 alias ci="composer install"
 alias composr="composer"
 alias cmposer="composer"
