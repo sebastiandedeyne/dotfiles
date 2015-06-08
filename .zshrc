@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
 
+MYDOTFILES="$(cd "$(dirname "$0")" && pwd)"
+
 # ZSH
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
+
+# Private stuff
+source $MYDOTFILES/.zshrc-private
 
 # General
 export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
