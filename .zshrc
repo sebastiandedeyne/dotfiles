@@ -19,6 +19,9 @@ export PATH="$PATH:/$HOME/.composer/vendor/bin"
 alias sites="~/Sites"
 alias dotfiles="~/Sites/sebastiandedeyne/dotfiles"
 
+# Bash
+alias rip="rm -rf"
+
 # Vim
 export VISUAL=vim
 export EDITOR="$VISUAL"
