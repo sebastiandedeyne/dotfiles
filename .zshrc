@@ -35,12 +35,12 @@ function gac {
 }
 
 function github {
-    git clone git@github.com:$1.git
+    git clone git@github.com:$1.git $2
 }
 alias gh="github"
 
 function bitbucket {
-    git clone git@bitbucket.org:$1
+    git clone git@bitbucket.org:$1 $2
 }
 alias bb="bitbucket"
 
