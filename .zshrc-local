@@ -6,6 +6,14 @@ source ~/Sites/sebastiandedeyne/dotfiles/.zshrc
 alias http="python -m SimpleHTTPServer"
 alias hosts="sudo vi /etc/hosts"
 
+# NPM
+# https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
+NPM_PACKAGES="${HOME}/.npm-packages"
+NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+PATH="$NPM_PACKAGES/bin:$PATH"
+unset MANPATH
+MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
 # Vim
 alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
 

@@ -62,9 +62,10 @@ function phpackage {
 }
 
 # PHP
-alias phpspec="vendor/bin/phpspec"
 alias phpunit="vendor/bin/phpunit"
 alias pun="phpunit"
+alias phpspec="vendor/bin/phpspec"
+alias spec="phpspec"
 alias art="php artisan"
 alias c="composer"
 alias cu="composer update"
