@@ -24,6 +24,9 @@ export GOPATH=~/.go
 # Homestead
 alias hs="~/.composer/vendor/bin/homestead"
 
+# PHP
+alias php7="/usr/local/Cellar/php7/HEAD/bin/php"
+
 # Applications
 alias sourcetree="open -a SourceTree"
 
