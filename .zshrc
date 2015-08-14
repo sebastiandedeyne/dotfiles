@@ -37,6 +37,20 @@ function gac {
     git commit -m $1
 }
 
+function gacp {
+    git add --all
+    git commit -m $1
+    git push
+}
+
+function gdevm {
+    git checkout master
+    git merge develop
+    git push
+    git checkout develop
+    git push
+}
+
 function github {
     git clone git@github.com:$1.git $2
 }
