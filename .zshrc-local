@@ -57,10 +57,7 @@ function mamp {
 }
 
 # Git
-function gacdevm {
-    git checkout develop
-    git add --all
-    git commit -m "$1"
+function gdevm {
     git checkout master
     git merge develop
     git push
