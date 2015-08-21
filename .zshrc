@@ -61,6 +61,14 @@ function bitbucket {
 }
 alias bb="bitbucket"
 
+function bbo {
+    remote=$(git config --get remote.origin.url)
+    remote=${remote#"git@bitbucket.org:"}
+    remote=${remote%".git"}
+
+    open "https://bitbucket.org/${remote}"
+}
+
 # Usage: phpackage package-name
 function phpackage {
     git clone git@github.com:thephpleague/skeleton.git $1
@@ -90,6 +98,9 @@ alias cmposer="composer"
 alias compser="composer"
 alias compsoer="composer"
 alias dump="composer dump"
+
+# JS
+alias ni="npm install"
 
 # Various
 function digga {
