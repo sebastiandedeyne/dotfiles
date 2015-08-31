@@ -48,6 +48,7 @@ if [ ! -f /usr/local/extra_homestead_software_installed ]; then
     echo "Setting up git"
     git config --global user.name "Sebastian De Deyne"
     git config --global user.email "sebastiandedeyne@gmail.com"
+    git config --global push.default simple
     rm ~/.gitignore_global
     ln -s ~/Sites/sebdd.dotfiles/.gitignore_global ~/.gitignore_global
 
