@@ -15,3 +15,7 @@ Thumbs.db
 
 # Sublime Text
 *.sublime-project
+
+# CTags
+tags
+.tags_swap

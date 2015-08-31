@@ -16,8 +16,8 @@ export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sb
 export PATH="$PATH:/$HOME/.composer/vendor/bin"
 
 # Shortcuts
-alias sites="~/Sites"
-alias dotfiles="~/Sites/sebastiandedeyne/dotfiles"
+alias si="~/Sites"
+alias dotfiles="~/Sites/sebdd.dotfiles"
 
 # Bash
 alias rip="rm -rf"
@@ -31,6 +31,7 @@ alias vi="vim"
 alias gadd="git add --all"
 alias gpu="git push -u origin master"
 alias goops="git add --all && git commit -m \"Minor fix for last commit\""
+alias gl="git log --oneline --decorate --all --graph"
 
 function gac {
     git add --all
@@ -93,10 +94,6 @@ alias c="composer"
 alias cu="composer update"
 alias cr="composer require"
 alias ci="composer install"
-alias composr="composer"
-alias cmposer="composer"
-alias compser="composer"
-alias compsoer="composer"
 alias dump="composer dump"
 
 # JS
@@ -108,4 +105,4 @@ function digga {
 }
 
 # Z
-. ~/Sites/sebastiandedeyne/dotfiles/z.sh
+. ~/Sites/sebdd.dotfiles/z.sh

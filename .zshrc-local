@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-source ~/Sites/sebastiandedeyne/dotfiles/.zshrc
+source ~/Sites/sebdd.dotfiles/.zshrc
 
 # General
 alias http="python -m SimpleHTTPServer"
-alias hosts="sudo vi /etc/hosts"
+alias hosts="open /etc/hosts -a Sublime\ Text"
 
 # NPM
 # https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
@@ -41,6 +41,8 @@ function subl {
         open $1 -a "Sublime Text"
     fi
 }
+
+alias bl="subl ~/Sites/spatie.blender"
 
 function s {
     z $1
