@@ -1,15 +1,10 @@
 #!/usr/bin/env bash
 
-MYDOTFILES="$(cd "$(dirname "$0")" && pwd)"
-
 # ZSH
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
-
-# Private stuff
-source $MYDOTFILES/.zshrc-private
 
 # General
 export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
@@ -17,7 +12,7 @@ export PATH="$PATH:/$HOME/.composer/vendor/bin"
 
 # Shortcuts
 alias si="~/Sites"
-alias dotfiles="~/Sites/sebdd.dotfiles"
+alias dotfiles="~/dotfiles"
 
 # Bash
 alias rip="rm -rf"
@@ -105,4 +100,4 @@ function digga {
 }
 
 # Z
-. ~/Sites/sebdd.dotfiles/z.sh
+. ~/dotfiles/scripts/z.sh

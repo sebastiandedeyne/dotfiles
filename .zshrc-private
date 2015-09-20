@@ -1,0 +1,1 @@
+alias satis="ssh spatie.be 'cd satis.spatie.be; bin/satis build satis.json public/'"

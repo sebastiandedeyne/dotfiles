@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ~/Sites/sebdd.dotfiles/.zshrc
+source ~/dotfiles/.zshrc
 
 # General
 alias http="python -m SimpleHTTPServer"
@@ -49,3 +49,6 @@ export PATH="/usr/local/sbin:$PATH"
 # Default Browser
 # Requires https://github.com/kerma/defaultbrowser
 alias br="defaultbrowser -set"
+
+# Private
+source ~/Dropbox/Settings/dotfiles/.zshrc-private

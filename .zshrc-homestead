@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ~/Sites/sebdd.dotfiles/.zshrc
+source ~/dotfiles/.zshrc
 
 # Mysql
 # Note: requires ~/.my.cnf
