@@ -25,24 +25,11 @@ export GOPATH=~/.go
 alias hs="~/.composer/vendor/bin/homestead"
 
 # PHP
-alias php7="/usr/local/Cellar/php7/HEAD/bin/php"
+alias php5='brew unlink php70 && brew link php56'
+alias php7='brew unlink php56 && brew link php70'
 
 # Applications
 alias sourcetree="open -a SourceTree"
-
-function subl {
-    if [ -z "$1" ]; then
-        if [ ! -f ./${PWD##*/}.sublime-project ]; then
-            open . -a "Sublime Text"
-        else
-            open ./${PWD##*/}.sublime-project
-        fi
-    else
-        open $1 -a "Sublime Text"
-    fi
-}
-
-alias bl="subl ~/Sites/spatie.blender"
 
 function s {
     z $1
@@ -57,3 +44,8 @@ function mamp {
     rm /Applications/MAMP/htdocs
     ln -s $(cd "$1"; pwd) /Applications/MAMP/htdocs
 }
+export PATH="/usr/local/sbin:$PATH"
+
+# Default Browser
+# Requires https://github.com/kerma/defaultbrowser
+alias br="defaultbrowser -set"
