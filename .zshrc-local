@@ -3,7 +3,6 @@
 source ~/dotfiles/.zshrc
 
 # General
-alias http="python -m SimpleHTTPServer"
 alias hosts="open /etc/hosts -a Sublime\ Text"
 
 # NPM
@@ -13,6 +12,8 @@ NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 PATH="$NPM_PACKAGES/bin:$PATH"
 unset MANPATH
 MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+npm="~/.npm-packages/bin/npm"
 
 # Vim
 alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
@@ -30,11 +31,7 @@ alias php7='brew unlink php56 && brew link php70'
 
 # Applications
 alias sourcetree="open -a SourceTree"
-
-function s {
-    z $1
-    subl
-}
+alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 
 # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin"

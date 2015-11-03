@@ -18,3 +18,7 @@ Thumbs.db
 
 # CTags
 .tags_swap
+
+# NPM
+npm-debug.log
+
