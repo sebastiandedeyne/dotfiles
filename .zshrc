@@ -27,6 +27,7 @@ alias gadd="git add --all"
 alias gpu="git push -u origin master"
 alias goops="git add --all && git commit -m \"Minor fix for last commit\""
 alias gl="git log --oneline --decorate --all --graph"
+alias gcm="git commit -m"
 
 function gac {
     git add --all

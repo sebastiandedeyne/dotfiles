@@ -28,6 +28,7 @@ alias hs="~/.composer/vendor/bin/homestead"
 # PHP
 alias php5='brew unlink php70 && brew link php56'
 alias php7='brew unlink php56 && brew link php70'
+source ~/.phpbrew/bashrc
 
 # Applications
 alias sourcetree="open -a SourceTree"
@@ -49,3 +50,24 @@ alias br="defaultbrowser -set"
 
 # Private
 source ~/Dropbox/Settings/dotfiles/.zshrc-private
+
+export NVM_DIR="/Users/sebastiandedeyne/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+function vm() {
+   cd ~/homestead7
+   
+   command="$1"
+
+   if [ "$command" = "edit" ]; then
+      open ~/.homestead/homestead.yaml
+   else
+      if [ -z "$command" ]; then 
+         command="ssh"
+      fi
+   
+      eval "vagrant ${command}"
+   fi
+
+   cd -
+}
