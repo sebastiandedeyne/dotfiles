@@ -1,49 +1,40 @@
-" Based on CSS WIzardry's .vimrc
-" http://csswizardry.com/2014/06/vim-for-people-who-think-things-like-vim-are-weird-and-hard/
-
-" Syntax highlighting
-
-" Enable syntax highighting
-syntax enable
-" 256 colours, please
-set t_Co=256
-
-
-" Tabs, indentation and lines
-
-filetype plugin indent on
-" 4 spaces please
-set expandtab
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
-" Round indent to nearest multiple of 4
-set shiftround
-" No line-wrapping
-set nowrap
-
-" Interactions
-
-" Start scrolling slightly before the cursor reaches an edge
-set scrolloff=3
-set sidescrolloff=5
-" Scroll sideways a character at a time, rather than a screen at a time
-set sidescroll=1
-" Backspace behaviour
+" Vundle 
 set nocompatible
-set backspace=2
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 
-" Visual decorations
+" Syntax
+colorscheme onedark
+set t_Co=256 
+syntax enable
 
-" Show status line
-set laststatus=2
-" Show what mode you’re currently in
-set showmode
-" Show what commands you’re typing
-set showcmd
-" Allow modelines
-set modeline
-" Show current line and column position in file
-set ruler
-" Show file title in terminal tab
-set title
+" Indentation
+set tabstop=4               " Visual tab size
+set softtabstop=4           " Tab size when using spaces
+set expandtab               " Transform tabs to spaces
+set shiftwidth=4            " Tab size when auto indenting
+set shiftround              " Round indent to nearest multiple of 4
+
+" UI
+set number              " Display line numbers
+set showcmd             " Show command in the bottom bar
+set wildmenu            " Autocomplete in bottom bar
+set lazyredraw          " Redraw less for performance
+" set showmatch         " Highlight matching brackets
+" set cursorline        " Highlight the current line
+
+" File types
+au BufRead,BufNewFile *.scss set filetype=css
+au BufRead,BufNewFile *.md set filetype=markdown
+
+" CtrlP
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" Yet Another JavaScript Syntax
+Plugin 'othree/yajs.vim'
+
+call vundle#end()            " required
+filetype plugin indent on    " required:w
+
