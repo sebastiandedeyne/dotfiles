@@ -30,11 +30,19 @@ set mouse=a             " Enable mouse scrolling and selecting in iTerm2
 au BufRead,BufNewFile *.scss set filetype=css
 au BufRead,BufNewFile *.md set filetype=markdown
 
+" Move backups to their own folder instead of using a ~ suffix
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
+
 " CtrlP
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-" Yet Another JavaScript Syntax
+" Plugins
 Plugin 'othree/yajs.vim'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()            " required
 filetype plugin indent on    " required:w
