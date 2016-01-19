@@ -2,6 +2,11 @@
 
 source ~/dotfiles/.zshrc
 
+# Pure
+autoload -U promptinit && promptinit
+prompt pure
+PROMPT='%(?.%F{green}.%F{red}❯%F{green})❯%f '
+
 # General
 alias hosts="open /etc/hosts -a Sublime\ Text"
 
