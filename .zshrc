@@ -30,6 +30,9 @@ alias gl="git log --oneline --decorate --all --graph"
 alias gcm="git commit -m"
 alias gs="git stash"
 alias gsp="git stash pop"
+alias commit="git commit -m"
+alias pull="git pull --no-edit"
+alias push="git push"
 
 function gac {
     git add --all
