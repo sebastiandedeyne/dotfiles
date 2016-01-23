@@ -71,20 +71,6 @@ function bbo {
     open "https://bitbucket.org/${remote}"
 }
 
-# Usage: phpackage package-name
-function phpackage {
-    git clone git@github.com:thephpleague/skeleton.git $1
-    cd $1
-    rm -rf .git
-    find ./ -type f -exec sed -i '' -e "s/:package_name/${1}/g" {} \;
-    find ./ -type f -exec sed -i '' -e "s/thephpleague/spatie/g" {} \;
-    find ./ -type f -exec sed -i '' -e "s/league/spatie/g" {} \;
-    find ./ -type f -exec sed -i '' -e "s/:author_name/Sebastian De Deyne/g" {} \;
-    find ./ -type f -exec sed -i '' -e "s/:author_email/sebastian@spatie\.be/g" {} \;
-    find ./ -type f -exec sed -i '' -e "s/:author_username/sebastiandedeyne/g" {} \;
-    find ./ -type f -exec sed -i '' -e "s/:author_website/https:\/\/spatie\.be/g" {} \;
-}
-
 # PHP
 alias phpunit="vendor/bin/phpunit"
 alias pun="phpunit"
