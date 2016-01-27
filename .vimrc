@@ -24,7 +24,6 @@ set wildmenu            " Autocomplete in bottom bar
 set lazyredraw          " Redraw less for performance
 " set showmatch         " Highlight matching brackets
 " set cursorline        " Highlight the current line
-set mouse=a             " Enable mouse scrolling and selecting in iTerm2
 
 " File types
 au BufRead,BufNewFile *.scss set filetype=css

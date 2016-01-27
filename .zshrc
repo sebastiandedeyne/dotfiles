@@ -68,7 +68,7 @@ function bbo {
     remote=${remote#"git@bitbucket.org:"}
     remote=${remote%".git"}
 
-    open "https://bitbucket.org/${remote}"
+    open "https://bitbucket.org/${remote}/src"
 }
 
 # PHP
