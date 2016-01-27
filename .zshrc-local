@@ -19,6 +19,7 @@ unset MANPATH
 MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 npm="~/.npm-packages/bin/npm"
+npmrc="vi ~/.npmrc"
 
 # Vim
 alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
