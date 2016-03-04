@@ -6,8 +6,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Syntax
-colorscheme onedark
+" if has('gui_running')
+"     colorscheme peacocks-in-space 
+"     set guifont=Office\ Code\ Pro:h16
+"     set linespace=5
+" endif
+
 set t_Co=256 
+set background=dark
+colorscheme onedark
 syntax enable
 
 " Indentation
@@ -46,13 +53,23 @@ set writebackup
 " noremap   <Left>   <NOP>
 " noremap   <Right>  <NOP>
 
+" Backspace options
+set backspace=indent,eol,start
+
 " CtrlP
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " Plugins
 Plugin 'othree/yajs.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required:w
 
+nmap <c-R> :CtrlPBufTag<cr>
+nmap <c-E> :CtrlPMRUFiles<cr>
+set wildignore+=*/node_modules/*
+
+set incsearch
+set hlsearch

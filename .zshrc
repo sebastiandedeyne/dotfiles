@@ -53,6 +53,11 @@ function gdevm {
     git push
 }
 
+function gbc {
+    git branch $1
+    git checkout $1
+}
+
 function github {
     git clone git@github.com:$1.git $2
 }
@@ -71,12 +76,17 @@ function bbo {
     open "https://bitbucket.org/${remote}/src"
 }
 
+function gho {
+    open "https://github.com/${1}"
+}
+
 # PHP
 alias phpunit="vendor/bin/phpunit"
 alias pun="phpunit"
 alias phpspec="vendor/bin/phpspec"
 alias spec="phpspec"
 alias art="php artisan"
+alias a="php artisan"
 alias c="composer"
 alias cu="composer update"
 alias cr="composer require"
