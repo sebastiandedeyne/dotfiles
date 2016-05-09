@@ -14,12 +14,13 @@ alias hosts="sudo vi /etc/hosts"
 alias grep='grep -r --extended-regexp --color=auto --exclude-dir=.svn --exclude-dir=.git'
 
 # NPM
-# https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
+# https://gist.github.com/DanHerbert/9520689
 NPM_PACKAGES="${HOME}/.npm-packages"
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 PATH="$NPM_PACKAGES/bin:$PATH"
 unset MANPATH
 MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+# export PATH="$HOME/.node/bin:$PATH"
 
 npm="~/.npm-packages/bin/npm"
 npmrc="vi ~/.npmrc"
@@ -76,4 +77,14 @@ function vm() {
    fi
 
    cd -
+}
+
+function db {
+    if [ "$1" = "refresh" ]; then
+        mysql -uroot -e "drop database $2; create database $2"
+    elif [ "$1" = "create" ]; then
+        mysql -uroot -e "create database $2"
+    elif [ "$1" = "drop" ]; then
+        mysql -uroot -e "drop database $2"
+    fi
 }

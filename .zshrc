@@ -83,6 +83,7 @@ function gho {
 # PHP
 alias phpunit="vendor/bin/phpunit"
 alias pun="phpunit"
+alias punf="phpunit --filter"
 alias phpspec="vendor/bin/phpspec"
 alias spec="phpspec"
 alias art="php artisan"
