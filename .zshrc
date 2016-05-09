@@ -25,14 +25,11 @@ alias vi="vim"
 # Git
 alias gadd="git add --all"
 alias gpu="git push -u origin master"
-alias goops="git add --all && git commit -m \"Minor fix for last commit\""
 alias gl="git log --oneline --decorate --all --graph"
 alias gcm="git commit -m"
 alias gs="git stash"
 alias gsp="git stash pop"
-alias commit="git commit -m"
-alias pull="git pull --no-edit"
-alias push="git push"
+alias lastcommit="git diff HEAD^ HEAD"
 
 function gac {
     git add --all
