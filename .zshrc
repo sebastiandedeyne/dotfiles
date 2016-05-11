@@ -30,6 +30,7 @@ alias gcm="git commit -m"
 alias gs="git stash"
 alias gsp="git stash pop"
 alias lastcommit="git diff HEAD^ HEAD"
+alias gclean="git clean -df"
 
 function gac {
     git add --all
