@@ -55,9 +55,6 @@ export PATH="/usr/local/sbin:$PATH"
 # Requires https://github.com/kerma/defaultbrowser
 alias br="defaultbrowser -set"
 
-# Private
-source ~/Dropbox/Settings/dotfiles/.zshrc-private
-
 export NVM_DIR="/Users/sebastiandedeyne/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
