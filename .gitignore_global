@@ -15,10 +15,14 @@ Thumbs.db
 
 # Sublime Text
 *.sublime-project
+.phpintel
+
+# VSCode
+.vscode
 
 # CTags
 .tags_swap
 
 # NPM
 npm-debug.log
-
+yarn-error.log
