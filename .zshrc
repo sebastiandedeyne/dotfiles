@@ -1,37 +1,49 @@
 #!/usr/bin/env bash
 
+
 # -- ZSH -----------------------------------------------------------------------
+
 
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
+
 # -- Pure ----------------------------------------------------------------------
+
 
 autoload -U promptinit && promptinit
 prompt pure
 PROMPT='%(?.%F{green}.%F{red}❯%F{green})❯%f '
 
+
 # -- Bash ----------------------------------------------------------------------
+
 
 export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 
 alias rip="rm -rf"
 alias grep='grep -r --extended-regexp --color=auto --exclude-dir=.svn --exclude-dir=.git'
 
+
 # -- Files & locations ---------------------------------------------------------
+
 
 alias si="~/Sites"
 alias hosts="sudo vi /etc/hosts"
 
+
 # -- Vim settings --------------------------------------------------------------
+
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
 alias vi="vim"
 
+
 # -- Git aliases ---------------------------------------------------------------
+
 
 alias gadd="git add --all"
 alias gpu="git push -u origin master"
@@ -59,7 +71,9 @@ function gmm {
     git checkout -
 }
 
+
 # -- PHP -----------------------------------------------------------------------
+
 
 export PATH="$PATH:/$HOME/.composer/vendor/bin"
 
@@ -76,7 +90,9 @@ alias ci="composer install"
 alias dump="composer dump"
 alias comp="vi composer.json"
 
+
 # -- JavaScript ----------------------------------------------------------------
+
 
 export PATH="~/.yarn/bin:$PATH"
 
@@ -91,7 +107,9 @@ alias pack="vi package.json"
 alias npmnpm="npm config set registry https://registry.npmjs.org"
 alias npmspatie="npm config set registry https://npm.spatie.be"
 
+
 # -- MySQL ---------------------------------------------------------------------
+
 
 function db {
     if [ "$1" = "refresh" ]; then
@@ -103,17 +121,23 @@ function db {
     fi
 }
 
+
 # -- Apps ----------------------------------------------------------------------
+
 
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias br="defaultbrowser -set"
 
+
 # -- Various -------------------------------------------------------------------
+
 
 function digga {
     dig +nocmd "$1" any +multiline +noall +answer
 }
 
+
 # -- Z -------------------------------------------------------------------------
+
 
 . ~/dotfiles/scripts/z.sh
