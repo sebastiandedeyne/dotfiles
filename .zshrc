@@ -71,6 +71,10 @@ function gmm {
     git checkout -
 }
 
+function gh {
+    git clone git@github.com:$@
+}
+
 
 # -- PHP -----------------------------------------------------------------------
 
