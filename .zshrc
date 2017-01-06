@@ -26,7 +26,7 @@ export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sb
 alias rip="rm -rf"
 alias grep='grep -r --extended-regexp --color=auto --exclude-dir=.svn --exclude-dir=.git'
 
-mk() { 
+function mk { 
     mkdir -p $(dirname "$1") && touch "$1" 
 }
 
