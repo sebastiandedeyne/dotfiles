@@ -49,6 +49,7 @@ alias vi="vim"
 # -- Git aliases ---------------------------------------------------------------
 
 
+alias git="hub"
 alias gadd="git add --all"
 alias gpu="git push -u origin master"
 alias gl="git log --oneline --decorate --all --graph"
