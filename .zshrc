@@ -83,12 +83,7 @@ function gmm {
 
 export PATH="$PATH:/$HOME/.composer/vendor/bin"
 
-alias phpunit="vendor/bin/phpunit"
-alias pun="phpunit"
-alias punf="phpunit --filter"
-alias phpspec="vendor/bin/phpspec"
-alias spec="phpspec"
-alias art="php artisan"
+# Composer
 alias c="composer"
 alias cu="composer update"
 alias cr="composer require"
@@ -96,10 +91,23 @@ alias ci="composer install"
 alias dump="composer dump"
 alias comp="vi composer.json"
 
+# PHPUnit
+alias pun="./vendor/bin/phpunit"
+alias punf="./vendor/bin/phpunit --filter"
+
 function punw {
+    # Requires `onchange` module
+    # $ yarn global add onchange
     ./vendor/bin/phpunit $1
     onchange 'src/**/*' -- ./vendor/bin/phpunit $1
 }
+
+# PHPSpec
+alias spec="./vendor/bin/phpspec"
+
+# Laravel
+alias art="php artisan"
+
 
 # -- JavaScript ----------------------------------------------------------------
 
