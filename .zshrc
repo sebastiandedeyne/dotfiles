@@ -63,7 +63,8 @@ function gac {
     git commit -m $1
 }
 
-function gacp { git add --all;
+function gacp {
+    git add --all;
     git commit -m $1
     git push
 }
@@ -95,6 +96,10 @@ alias ci="composer install"
 alias dump="composer dump"
 alias comp="vi composer.json"
 
+function punw {
+    ./vendor/bin/phpunit $1
+    onchange 'src/**/*' -- ./vendor/bin/phpunit $1
+}
 
 # -- JavaScript ----------------------------------------------------------------
 
