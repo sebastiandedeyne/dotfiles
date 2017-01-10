@@ -97,7 +97,7 @@ alias punf="./vendor/bin/phpunit --filter"
 
 function punw {
     # Requires `onchange` module
-    # $ yarn global add onchange
+    # Installation: yarn global add onchange
     ./vendor/bin/phpunit $1
     onchange 'src/**/*' -- ./vendor/bin/phpunit $1
 }
