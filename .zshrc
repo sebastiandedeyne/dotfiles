@@ -108,6 +108,10 @@ alias spec="./vendor/bin/phpspec"
 # Laravel
 alias art="php artisan"
 
+# Envoy
+alias deploy="envoy run deploy"
+alias deploy-code="envoy run deploy-code"
+
 
 # -- JavaScript ----------------------------------------------------------------
 
