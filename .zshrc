@@ -99,7 +99,7 @@ function punw {
     # Requires `onchange` module
     # Installation: yarn global add onchange
     ./vendor/bin/phpunit $1
-    onchange 'src/**/*' -- ./vendor/bin/phpunit $1
+    onchange 'src/**/*.php' 'tests/**/*.php' -- ./vendor/bin/phpunit $1
 }
 
 # PHPSpec
