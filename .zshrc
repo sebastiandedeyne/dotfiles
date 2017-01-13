@@ -106,7 +106,7 @@ function punw {
 alias spec="./vendor/bin/phpspec"
 
 # Laravel
-alias art="php artisan"
+alias a="php artisan"
 
 # Envoy
 alias deploy="envoy run deploy"
