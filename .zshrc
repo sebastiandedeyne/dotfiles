@@ -127,6 +127,7 @@ MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 alias y="yarn"
 alias yu="yarn upgrade"
+alias y!="rm -rf node_modules; yarn"
 alias pack="vi package.json"
 alias npmnpm="npm config set registry https://registry.npmjs.org"
 alias npmspatie="npm config set registry https://npm.spatie.be"
