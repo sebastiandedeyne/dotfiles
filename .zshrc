@@ -51,12 +51,14 @@ alias vi="vim"
 
 alias git="hub"
 alias gadd="git add --all"
+alias gph="git push origin head"
 alias gpu="git push -u origin master"
 alias gl="git log --oneline --decorate --all --graph"
 alias gcm="git commit -m"
 alias gs="git stash"
 alias gsp="git stash pop"
 alias gbc="git checkout -b"
+alias pr="hub pull-request create"
 
 function gac {
     git add --all
@@ -107,6 +109,7 @@ alias spec="./vendor/bin/phpspec"
 
 # Laravel
 alias a="php artisan"
+alias deps="composer install; yarn"
 
 # Envoy
 alias deploy="envoy run deploy"
@@ -126,6 +129,7 @@ unset MANPATH
 MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 alias y="yarn"
+alias ya="yarn add"
 alias yu="yarn upgrade"
 alias y!="rm -rf node_modules; yarn"
 alias pack="vi package.json"
