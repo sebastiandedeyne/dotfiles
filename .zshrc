@@ -59,6 +59,7 @@ alias gs="git stash"
 alias gsp="git stash pop"
 alias gbc="git checkout -b"
 alias pr="hub pull-request create"
+alias rel="hub release create"
 
 function gac {
     git add --all
