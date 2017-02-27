@@ -138,6 +138,11 @@ alias npmnpm="npm config set registry https://registry.npmjs.org"
 alias npmspatie="npm config set registry https://npm.spatie.be"
 
 
+# -- Go ------------------------------------------------------------------------
+
+export GOPATH="/Users/sebastiandedeyne/go"
+
+
 # -- MySQL ---------------------------------------------------------------------
 
 
