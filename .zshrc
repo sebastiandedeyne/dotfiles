@@ -26,8 +26,8 @@ export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sb
 alias rip="rm -rf"
 alias grep='grep -r --extended-regexp --color=auto --exclude-dir=.svn --exclude-dir=.git'
 
-function mk { 
-    mkdir -p $(dirname "$1") && touch "$1" 
+function mk {
+    mkdir -p $(dirname "$1") && touch "$1"
 }
 
 
@@ -96,15 +96,7 @@ alias dump="composer dump"
 alias comp="vi composer.json"
 
 # PHPUnit
-alias pun="./vendor/bin/phpunit"
-alias punf="./vendor/bin/phpunit --filter"
-
-function punw {
-    # Requires `onchange` module
-    # Installation: yarn global add onchange
-    ./vendor/bin/phpunit $1
-    onchange 'src/**/*.php' 'tests/**/*.php' -- ./vendor/bin/phpunit $1
-}
+alias p="./vendor/bin/phpunit"
 
 # PHPSpec
 alias spec="./vendor/bin/phpspec"
