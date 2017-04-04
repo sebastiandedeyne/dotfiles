@@ -5,13 +5,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
-" Syntax
-" if has('gui_running')
-"     colorscheme peacocks-in-space 
-"     set guifont=Office\ Code\ Pro:h16
-"     set linespace=5
-" endif
-
 set t_Co=256 
 set background=dark
 colorscheme onedark
@@ -29,8 +22,6 @@ set number              " Display line numbers
 set showcmd             " Show command in the bottom bar
 set wildmenu            " Autocomplete in bottom bar
 set lazyredraw          " Redraw less for performance
-" set showmatch         " Highlight matching brackets
-" set cursorline        " Highlight the current line
 
 " File types
 au BufRead,BufNewFile *.scss set filetype=css
@@ -42,16 +33,6 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
-
-" Disable arrows because I'm a masochist
-" inoremap  <Up>     <NOP>
-" inoremap  <Down>   <NOP>
-" inoremap  <Left>   <NOP>
-" inoremap  <Right>  <NOP>
-" noremap   <Up>     <NOP>
-" noremap   <Down>   <NOP>
-" noremap   <Left>   <NOP>
-" noremap   <Right>  <NOP>
 
 " Backspace options
 set backspace=indent,eol,start
