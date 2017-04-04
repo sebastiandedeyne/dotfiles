@@ -97,6 +97,8 @@ alias comp="vi composer.json"
 
 # PHPUnit
 alias p="./vendor/bin/phpunit"
+alias phpunit="./vendor/bin/phpunit"
+alias pw="watchman-make -p 'src/**/*.php' 'tests/**/*.php' --make=vendor/bin/phpunit -t tests"
 
 # PHPSpec
 alias spec="./vendor/bin/phpspec"
@@ -129,6 +131,7 @@ alias y!="rm -rf node_modules; yarn"
 alias pack="vi package.json"
 alias npmnpm="npm config set registry https://registry.npmjs.org"
 alias npmspatie="npm config set registry https://npm.spatie.be"
+alias j="./node_modules/.bin/jest"
 
 
 # -- Go ------------------------------------------------------------------------
