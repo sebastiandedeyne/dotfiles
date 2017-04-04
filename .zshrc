@@ -136,6 +136,7 @@ alias j="./node_modules/.bin/jest"
 
 # -- Go ------------------------------------------------------------------------
 
+
 export GOPATH="/Users/sebastiandedeyne/go"
 
 
