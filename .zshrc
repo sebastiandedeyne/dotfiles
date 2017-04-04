@@ -158,6 +158,7 @@ function db {
 
 
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
+alias s='open -a /Applications/Sublime\ Text.app "`pwd`"'
 alias br="defaultbrowser -set"
 
 
