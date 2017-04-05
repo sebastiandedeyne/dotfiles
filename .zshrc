@@ -98,7 +98,14 @@ alias comp="vi composer.json"
 # PHPUnit
 alias p="./vendor/bin/phpunit"
 alias phpunit="./vendor/bin/phpunit"
-alias pw="watchman-make -p 'src/**/*.php' 'tests/**/*.php' --make=vendor/bin/phpunit -t tests"
+
+function pw {
+    clear && printf '\e[3J'
+    watchman-make \
+        -p 'src/**/*.php' 'app/**/*.php' 'tests/**/*.php' \
+        --make="clear && printf '\e[3J' && vendor/bin/phpunit" \
+        -t ${1:-tests} 
+}
 
 # PHPSpec
 alias spec="./vendor/bin/phpspec"
