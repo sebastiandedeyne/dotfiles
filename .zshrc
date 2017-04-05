@@ -100,10 +100,11 @@ alias p="./vendor/bin/phpunit"
 alias phpunit="./vendor/bin/phpunit"
 
 function pw {
-    clear && printf '\e[3J'
-    watchman-make \
-        -p 'src/**/*.php' 'app/**/*.php' 'tests/**/*.php' \
-        --make="clear && printf '\e[3J' && vendor/bin/phpunit" \
+    run="clear && printf '\e[3J' && vendor/bin/phpunit ${1:-tests}"
+
+    eval "$run" && watchman-make \
+        -p 'app/**/*.php' 'database/**/*.php' 'resources/**/*.php' 'src/**/*.php' 'tests/**/*.php' \
+        --make=$run \
         -t ${1:-tests} 
 }
 
