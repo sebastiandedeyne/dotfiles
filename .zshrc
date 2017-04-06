@@ -101,11 +101,13 @@ alias phpunit="./vendor/bin/phpunit"
 
 function pw {
     run="clear && printf '\e[3J' && vendor/bin/phpunit"
+    [[ -n $@ ]] && args=$@ || args="tests"
 
-    eval "$run ${1:-tests}" && watchman-make \
+    eval "$run $args"
+    watchman-make \
         -p 'app/**/*.php' 'database/**/*.php' 'resources/**/*.php' 'routes/**/*.php' 'src/**/*.php' 'tests/**/*.php' \
         --make=$run \
-        -t ${1:-tests} 
+        -t "$args" 
 }
 
 # PHPSpec
