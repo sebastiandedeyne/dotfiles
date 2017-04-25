@@ -1,3 +1,5 @@
 --ignore-directory=is:node_modules
 --ignore-directory=is:vendor
 --ignore-directory=is:bower_components
+--ignore-directory=is:storage
+--ignore-directory=is:.sass-cache
