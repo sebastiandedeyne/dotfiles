@@ -73,14 +73,16 @@ function gacp {
     git push origin head
 }
 
-function gmm {
-    git checkout master
-    git pull
-    git merge -
-    git push
-    git checkout -
+function gam {
+    git add --all
+    git commit --amend -m $1
 }
 
+function gamp {
+    git add --all
+    git commit --amend -m $1
+    git push origin head -f
+}
 
 # -- PHP -----------------------------------------------------------------------
 
@@ -118,29 +120,23 @@ alias a="php artisan"
 alias deps="composer install; yarn"
 
 # Envoy
-alias deploy="envoy run deploy"
-alias deploy-code="envoy run deploy-code"
+alias d="envoy run deploy"
+alias dc="envoy run deploy-code"
 
 
 # -- JavaScript ----------------------------------------------------------------
 
 
-export PATH="~/.yarn/bin:$PATH"
-
-# https://gist.github.com/DanHerbert/9520689
-NPM_PACKAGES="${HOME}/.npm-packages"
-NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-PATH="$NPM_PACKAGES/bin:$PATH"
-unset MANPATH
-MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+PATH="${HOME}/.npm-packages/bin:$PATH"
 
 alias y="yarn"
 alias ya="yarn add"
 alias yu="yarn upgrade"
 alias y!="rm -rf node_modules; yarn"
+alias n="npm"
+alias ni="npm install"
+alias nu="npm update"
 alias pack="vi package.json"
-alias npmnpm="npm config set registry https://registry.npmjs.org"
-alias npmspatie="npm config set registry https://npm.spatie.be"
 alias j="./node_modules/.bin/jest"
 
 
@@ -174,6 +170,7 @@ alias br="defaultbrowser -set"
 
 # -- Various -------------------------------------------------------------------
 
+alias deps="composer install; yarn"
 
 function digga {
     dig +nocmd "$1" any +multiline +noall +answer
@@ -184,3 +181,4 @@ function digga {
 
 
 . ~/dotfiles/scripts/z.sh
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
