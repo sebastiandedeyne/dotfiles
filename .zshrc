@@ -55,7 +55,7 @@ alias gap="git add -p"
 alias gph="git push origin head"
 alias gpu="git push -u origin master"
 alias gl="git log --oneline --decorate --all --graph"
-alias commit="git commit -m"
+alias gc="git commit -m"
 alias gs="git stash"
 alias gsp="git stash pop"
 alias gbc="git checkout -b"
@@ -78,12 +78,6 @@ function gam {
     git commit --amend -m $1
 }
 
-function gamp {
-    git add --all
-    git commit --amend -m $1
-    git push origin head -f
-}
-
 # -- PHP -----------------------------------------------------------------------
 
 
@@ -101,12 +95,8 @@ alias p="./vendor/bin/phpunit"
 alias phpunit="./vendor/bin/phpunit"
 alias pw="phpunit-watcher watch"
 
-# PHPSpec
-alias spec="./vendor/bin/phpspec"
-
 # Laravel
 alias a="php artisan"
-alias deps="composer install; yarn"
 
 # Envoy
 alias d="envoy run deploy"
@@ -127,6 +117,7 @@ alias ni="npm install"
 alias nu="npm update"
 alias pack="vi package.json"
 alias j="./node_modules/.bin/jest"
+alias jw="./node_modules/.bin/jest --watch"
 
 
 # -- Go ------------------------------------------------------------------------
@@ -152,16 +143,14 @@ function db {
 # -- Apps ----------------------------------------------------------------------
 
 
-alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias s='open -a /Applications/Sublime\ Text.app "`pwd`"'
 alias c="code ."
-alias br="defaultbrowser -set"
+alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 
 # -- Various -------------------------------------------------------------------
 
-alias deps="composer install; yarn"
-alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 function digga {
     dig +nocmd "$1" any +multiline +noall +answer
