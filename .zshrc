@@ -90,7 +90,6 @@ function gamp {
 export PATH="$PATH:/$HOME/.composer/vendor/bin"
 
 # Composer
-alias c="composer"
 alias cu="composer update"
 alias cr="composer require"
 alias ci="composer install"
@@ -100,17 +99,7 @@ alias comp="vi composer.json"
 # PHPUnit
 alias p="./vendor/bin/phpunit"
 alias phpunit="./vendor/bin/phpunit"
-
-function pw {
-    run="clear && printf '\e[3J' && vendor/bin/phpunit"
-    [[ -n $@ ]] && args=$@ || args="tests"
-
-    eval "$run $args"
-    watchman-make \
-        -p 'app/**/*.php' 'database/**/*.php' 'resources/**/*.php' 'routes/**/*.php' 'src/**/*.php' 'tests/**/*.php' \
-        --make=$run \
-        -t "$args" 
-}
+alias pw="phpunit-watcher watch"
 
 # PHPSpec
 alias spec="./vendor/bin/phpspec"
@@ -165,12 +154,14 @@ function db {
 
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias s='open -a /Applications/Sublime\ Text.app "`pwd`"'
+alias c="code ."
 alias br="defaultbrowser -set"
 
 
 # -- Various -------------------------------------------------------------------
 
 alias deps="composer install; yarn"
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 function digga {
     dig +nocmd "$1" any +multiline +noall +answer

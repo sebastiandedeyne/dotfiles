@@ -1,0 +1,14 @@
+watch:
+  directories:
+    - app
+    - database
+    - resources
+    - routes
+    - src
+    - tests
+  fileMask: '*.php'
+notifications:
+  passingTests: false
+  failingTests: false
+phpunit:
+  arguments: '--stop-on-failure'

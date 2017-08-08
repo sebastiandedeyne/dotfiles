@@ -3,3 +3,5 @@
 --ignore-directory=is:bower_components
 --ignore-directory=is:storage
 --ignore-directory=is:.sass-cache
+--ignore-directory=is:public/js
+--ignore-directory=is:public/css
