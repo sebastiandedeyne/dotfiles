@@ -4,7 +4,6 @@
 # -- ZSH -----------------------------------------------------------------------
 
 
-
 export ZSH=/Users/sebastiandedeyne/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 plugins=(git)
@@ -154,4 +153,3 @@ function digga {
 
 
 . ~/dotfiles/scripts/z.sh
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
