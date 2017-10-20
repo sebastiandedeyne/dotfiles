@@ -136,7 +136,7 @@ function db {
 # -- Apps ----------------------------------------------------------------------
 
 
-alias s='open -a /Applications/Sublime\ Text.app "`pwd`"'
+alias s="subl ."
 alias c="code ."
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
