@@ -4,24 +4,17 @@
 # -- ZSH -----------------------------------------------------------------------
 
 
-export ZSH=$HOME/.oh-my-zsh
+
+export ZSH=/Users/sebastiandedeyne/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 
-# -- Pure ----------------------------------------------------------------------
-
-
-autoload -U promptinit && promptinit
-prompt pure
-PROMPT='%(?.%F{green}.%F{red}❯%F{green})❯%f '
-
-
 # -- Bash ----------------------------------------------------------------------
 
 
-export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 alias rip="rm -rf"
 alias grep='grep -r --extended-regexp --color=auto --exclude-dir=.svn --exclude-dir=.git'

@@ -5,3 +5,5 @@
 --ignore-directory=is:.sass-cache
 --ignore-directory=is:public/js
 --ignore-directory=is:public/css
+--ignore-directory=is:build
+--ignore-directory=is:_build
