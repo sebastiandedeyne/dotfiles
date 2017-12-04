@@ -112,6 +112,13 @@ alias j="./node_modules/.bin/jest"
 alias jw="./node_modules/.bin/jest --watch"
 
 
+# -- Elixir & Erlang/OTP--------------------------------------------------------
+
+
+export ERL_AFLAGS="-kernel shell_history enabled"
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+
+
 # -- Go ------------------------------------------------------------------------
 
 
