@@ -8,3 +8,4 @@
 --ignore-directory=is:build
 --ignore-directory=is:_build
 --ignore-directory=is:priv/static
+--ignore-directory=is:.next

@@ -1,13 +1,5 @@
-" Vundle 
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-
 set t_Co=256 
-set background=dark
-colorscheme onedark
+colorscheme github
 syntax enable
 
 " Indentation
@@ -39,18 +31,6 @@ set backspace=indent,eol,start
 
 " CtrlP
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-
-" Plugins
-Plugin 'othree/yajs.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'ctrlpvim/ctrlp.vim'
-
-call vundle#end()            " required
-filetype plugin indent on    " required:w
-
-nmap <c-R> :CtrlPBufTag<cr>
-nmap <c-E> :CtrlPMRUFiles<cr>
-set wildignore+=*/node_modules/*
 
 set incsearch
 set hlsearch
