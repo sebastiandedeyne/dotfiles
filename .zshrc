@@ -39,6 +39,7 @@ alias gsp="git stash pop"
 alias gbc="git checkout -b"
 alias pr="hub pull-request create"
 alias rel="hub release create"
+alias wip="gacp wip"
 
 function gac {
     git add --all
@@ -75,8 +76,6 @@ alias dc="envoy run deploy-code"
 # NVM is pretty slow so it's disabled by default
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-PATH="${HOME}/.npm-packages/bin:$PATH"
 
 alias y="yarn"
 alias ya="yarn add"
@@ -117,3 +116,4 @@ function digga {
 # -- Z -------------------------------------------------------------------------
 
 . ~/dotfiles/scripts/z.sh
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
