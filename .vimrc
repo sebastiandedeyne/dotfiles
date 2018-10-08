@@ -1,5 +1,5 @@
 set t_Co=256 
-colorscheme github
+colorscheme panic
 syntax enable
 
 " Indentation
