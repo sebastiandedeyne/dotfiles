@@ -71,6 +71,19 @@ alias p="./vendor/bin/phpunit"
 alias d="envoy run deploy"
 alias dc="envoy run deploy-code"
 
+phpv() {
+    valet stop
+    brew unlink php@7.0 php@7.1 php@7.2
+    brew link --force --overwrite $1
+    brew services start $1
+    composer global update
+    valet install
+}
+
+alias php70="phpv php@7.0"
+alias php71="phpv php@7.1"
+alias php72="phpv php"
+
 # -- JavaScript ----------------------------------------------------------------
 
 # NVM is pretty slow so it's disabled by default
@@ -78,16 +91,10 @@ alias dc="envoy run deploy-code"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 alias y="yarn"
-alias ya="yarn add"
-alias yu="yarn upgrade"
 alias y!="rm -rf node_modules; yarn"
-alias n="npm"
-alias ni="npm install"
-alias nu="npm update"
 alias pack="vi package.json"
 alias j="./node_modules/.bin/jest"
 alias jw="./node_modules/.bin/jest --watch"
-alias prettier="prettier --single-quote --trailing-comma es5 --write"
 
 # -- MySQL ---------------------------------------------------------------------
 
