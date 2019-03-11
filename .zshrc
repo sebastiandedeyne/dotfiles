@@ -73,16 +73,16 @@ alias dc="envoy run deploy-code"
 
 phpv() {
     valet stop
-    brew unlink php@7.0 php@7.1 php@7.2
+    brew unlink php@7.2 php@7.3
     brew link --force --overwrite $1
     brew services start $1
     composer global update
+    rm -f ~/.config/valet/valet.sock
     valet install
 }
 
-alias php70="phpv php@7.0"
-alias php71="phpv php@7.1"
-alias php72="phpv php"
+alias php72="phpv php@7.2"
+alias php73="phpv php@7.3"
 
 # -- JavaScript ----------------------------------------------------------------
 
@@ -124,3 +124,4 @@ function digga {
 
 . ~/dotfiles/scripts/z.sh
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
