@@ -1,33 +1,5 @@
-# Mac OS X hidden files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Vim swap files
-.*.sw?
-
-# PhpStorm
-.idea
-.phpstorm.meta.php
-_ide_helper_models.php
-_ide_helper.php
-_ide_helper_custom.php
-
-# Sublime Text
-*.sublime-project
-.phpintel
-
-# VSCode
 .vscode
-.elixir_ls
-
-# CTags
-.tags_swap
-
-# NPM
-npm-debug.log
-yarn-error.log
+.idea
+.phpunit-watcher.yml
+.phpactor.json

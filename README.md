@@ -1,3 +1,3 @@
 # My Dotfiles
 
-Repository containing my personal dotfiles
+My personal dotfiles.
