@@ -1,4 +1,8 @@
 {
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "permissions": {
     "allow": [
       "Skill(ray-skill:*)",
@@ -55,13 +59,10 @@
     ],
     "defaultMode": "acceptEdits"
   },
+  "model": "opus",
   "enabledPlugins": {
-    "laravel-simplifier@laravel": true,
-    "agent-browser@agent-browser": true
+    "superpowers@claude-plugins-official": true
   },
   "effortLevel": "high",
-  "attribution": {
-    "commit": "",
-    "pr": ""
-  }
+  "theme": "light"
 }

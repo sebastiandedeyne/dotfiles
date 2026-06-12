@@ -3,3 +3,4 @@
 .idea
 .phpunit-watcher.yml
 .phpactor.json
+.claude/settings.local.json
